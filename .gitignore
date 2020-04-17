@@ -1,0 +1,14 @@
+# Quartus project files
+db
+output_files
+
+*.qpf
+*.qsf
+*.qws
+
+# Quartus simulation files
+*.rpt
+
+# Verilator and test build files
+test/components
+*.o
