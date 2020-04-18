@@ -24,16 +24,16 @@ TEST_CASE("Validate _mux4 behaviour", TAGS)
 
     // Initialize device
     dut->sel = 0;
-    dut->in0 = 0;
-    dut->in1 = 1;
-    dut->in2 = 2;
-    dut->in3 = 3;
+    for (int i = 0; i < 4; ++i)
+    {
+        dut->in[i] = i;
+    }
     dut->eval();
 
     for (int i = 0; i < 4; ++i)
     {
         dut->sel = i;
         dut->eval();
-        REQUIRE(dut->out == i);
+        REQUIRE(dut->out == dut->in[i]);
     }
 }

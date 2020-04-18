@@ -24,20 +24,16 @@ TEST_CASE("Validate _mux8 behaviour", TAGS)
 
     // Initialize device
     dut->sel = 0;
-    dut->in0 = 0;
-    dut->in1 = 1;
-    dut->in2 = 2;
-    dut->in3 = 3;
-    dut->in4 = 4;
-    dut->in5 = 5;
-    dut->in6 = 6;
-    dut->in7 = 7;
+    for (int i = 0; i < 8; ++i)
+    {
+        dut->in[i] = i;
+    }
     dut->eval();
 
     for (int i = 0; i < 8; ++i)
     {
         dut->sel = i;
         dut->eval();
-        REQUIRE(dut->out == i);
+        REQUIRE(dut->out == dut->in[i]);
     }
 }
