@@ -6,8 +6,6 @@
  * equivalent one-hot signal.
  */
 
-#include <stdint.h>
-
 #include "catch.hpp"
 #include "macros.hpp"
 #include "V_decoder.h"
