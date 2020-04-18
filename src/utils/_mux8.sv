@@ -11,8 +11,12 @@
  * Outputs:
  *      out     The select input signal
  */
+
+`include "constants.vh"
+
+
 module _mux8(sel, in0, in1, in2, in3, in4, in5, in6, in7, out);
-    parameter n = WORD_LENGTH;
+    parameter n = constants::WORD_LENGTH;
 
     input           [  2:0] sel;
     input           [n-1:0] in0, in1, in2, in3, in4, in5, in6, in7;

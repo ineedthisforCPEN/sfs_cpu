@@ -17,7 +17,7 @@
 
 
 module _mux2(sel, in0, in1, out);
-    parameter n = WORD_LENGTH;
+    parameter n = constants::WORD_LENGTH;
 
     input           sel;
     input           [n-1:0] in0, in1;

@@ -16,7 +16,7 @@
 `include "constants.vh"
 
 module _dff(clk, D, Q);
-    parameter n = WORD_LENGTH;
+    parameter n = constants::WORD_LENGTH;
 
     input       clk;
     input       [n-1:0] D;

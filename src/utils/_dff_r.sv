@@ -19,7 +19,7 @@
 
 
 module _dff_r(clk, rst, D, Q);
-    parameter n = WORD_LENGTH;
+    parameter n = constants::WORD_LENGTH;
 
     input       clk;
     input       rst;
