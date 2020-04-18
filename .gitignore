@@ -11,4 +11,5 @@ output_files
 
 # Verilator and test build files
 test/components
+test/test_components
 *.o
