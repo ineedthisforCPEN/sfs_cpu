@@ -20,7 +20,7 @@
 
 
 module _dff_er(clk, rst, en, D, Q);
-    parameter n = BIT_WIDTH;
+    parameter n = WORD_LENGTH;
 
     input       clk;
     input       rst;

@@ -17,7 +17,7 @@
 
 
 module _mux2(sel, in0, in1, out);
-    parameter n = BIT_WIDTH;
+    parameter n = WORD_LENGTH;
 
     input           sel;
     input           [n-1:0] in0, in1;

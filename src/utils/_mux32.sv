@@ -18,7 +18,7 @@ module _mux32(sel,
         in24, in25, in26, in27, in28, in29, in30, in31,
         out
 );
-    parameter n = BIT_WIDTH;
+    parameter n = WORD_LENGTH;
 
     input           [  4:0] sel;
     input           [n-1:0] in00, in01, in02, in03, in04, in05, in06, in07;

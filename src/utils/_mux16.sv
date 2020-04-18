@@ -20,7 +20,7 @@ module _mux16(sel,
         in08, in09, in10, in11, in12, in13, in14, in15,
         out
 );
-    parameter n = BIT_WIDTH;
+    parameter n = WORD_LENGTH;
 
     input           [  3:0] sel;
     input           [n-1:0] in00, in01, in02, in03, in04, in05, in06, in07;

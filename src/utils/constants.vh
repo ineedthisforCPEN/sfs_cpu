@@ -7,6 +7,7 @@
 `ifndef _constants_vh
 `define _constants_vh
 
-localparam  BIT_WIDTH = 32;
+localparam  REGFILE_SIZE = 32;
+localparam  WORD_LENGTH = 32;
 
 `endif

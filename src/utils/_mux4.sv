@@ -15,7 +15,7 @@
 
 
 module _mux4(sel, in0, in1, in2, in3, out);
-    parameter n = BIT_WIDTH;
+    parameter n = WORD_LENGTH;
 
     input           [  1:0] sel;
     input           [n-1:0] in0, in1, in2, in3;
