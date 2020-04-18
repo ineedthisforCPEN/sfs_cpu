@@ -1,8 +1,9 @@
 /*
  * _dff.cpp
  *
- * Simulation and test for verilog module `_dff`. The device is a standard
- * D-flip-flop that latches the input on every positive clock cycle
+ * Simulation and test for verilog module `_dff`. The device is a
+ * standard D-flip-flop that latches the input on every positive clock
+ * cycle.
  */
 
 #include <stdint.h>
