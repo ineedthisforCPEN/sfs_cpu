@@ -26,6 +26,7 @@ package macros;
         for (log_2 = 0; value > 0; ++log_2) begin
             value = value >> 1;
         end
+        log_2 -= 1;
     endfunction
 endpackage;
 
