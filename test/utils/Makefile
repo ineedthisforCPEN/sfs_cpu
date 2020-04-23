@@ -20,7 +20,8 @@ COMPONENTS += _mux _mux2 _mux4 _mux8 _mux16 _mux32
 all: $(COMPONENTS)
 
 $(COMPONENTS): %: %.cpp
-	cd $(HARDWARE_DEFS) && $(MAKE) -f V$*.mk -j $$(nproc)
+	$(MAKE) -C $(HARDWARE_DEFS) -f V$*.mk
+	-$(MAKE) -C $(TESTBENCH_DEFS) -f Vtb_$*.mk
 	$(CC) $(FLAGS) $(INCLUDES) -c $<
 
 clean:
