@@ -24,14 +24,16 @@ TEST_CASE("Validate _mux2 behaviour", TAGS)
 
     // Initialize device
     dut->sel = 0;
-    dut->in0 = 0;
-    dut->in1 = 1;
+    for (int i = 0; i < 2; ++i)
+    {
+        dut->in[i] = i;
+    }
     dut->eval();
 
     for (int i = 0; i < 2; ++i)
     {
         dut->sel = i;
         dut->eval();
-        REQUIRE(dut->out == i);
+        REQUIRE(dut->out == dut->in[i]);
     }
 }
